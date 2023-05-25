@@ -17,6 +17,20 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to posts_path, notice: "つぶやきへんしゅうしました"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path , notice:"削除しました"
+  end
 
   private
 
@@ -24,3 +38,5 @@ class PostsController < ApplicationController
     params.require(:post).permit(:content)
   end
 end
+
+
