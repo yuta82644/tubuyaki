@@ -1,2 +1,21 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<h1>一覧画面</h1>
+
+
+<table>
+  <tr>
+    <th>内容</th>
+  
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.content %></td>
+      <td><%= link_to '編集', edit_post_path(post.id)%></td>
+      <td><%= link_to '削除', post_path(post.id), method: :delete, data: { confirm: 'OK?'}%></td>
+    </tr>
+<% end %>
+
+</table>
+
+<%= link_to 'post' , new_post_path %>
