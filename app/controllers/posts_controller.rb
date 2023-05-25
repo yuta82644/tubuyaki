@@ -26,6 +26,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def confirm
+    @post = Post.new(post_params)
+  end
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy

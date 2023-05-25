@@ -1,0 +1,10 @@
+<h3>以下の内容でポストする</h3>
+
+<%= form_with(model: @post, local: true) do |form| %>
+
+  <%= form.hidden_field :content %>
+
+  
+  <p>つぶやき:<%= @post.content %></p>
+  <%= form.submit  "ポストする" %>
+<% end %>
