@@ -1,11 +1,28 @@
-<h3>以下の内容でポストする</h3>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,700;1,400&family=Philosopher:ital@1&family=Tsukimi+Rounded:wght@300;400&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <h1 class="main_text">つぶやく</h1>
+      </div>
+    </header>
 
 <%= form_with(model: @post, local: true) do |form| %>
-
+<div class="text_field">
   <%= form.hidden_field :content %>
 
-  
+
   <p>つぶやき:<%= @post.content %></p>
-  <%= form.submit  "ポストする" %>
-  <%= form.submit "戻る" ,name: 'back' %>
+  <%= form.submit  "ポストする", class:'button_post' %>
+  <%= form.submit "戻る" ,name: 'back',class: 'button' %>
+</div>
 <% end %>
+<footer>
+<p><small>&copy;2023 postpost</small></p>
+</footer>
+  </body>
+</body>

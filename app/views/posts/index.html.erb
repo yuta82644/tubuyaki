@@ -1,21 +1,34 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,700;1,400&family=Philosopher:ital@1&family=Tsukimi+Rounded:wght@300;400&display=swap" rel="stylesheet">
+  </head>
 
-<h1>一覧画面</h1>
+  <body>
+    <header>
+      <div class="header">
+        <h1 class="main_text">つぶやきポスト</h1>
+      </div>
+    </header>
+
+    <table>
 
 
-<table>
-  <tr>
-    <th>内容</th>
-  
-  </tr>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.content %></td>
+          <td><%= link_to '編集', edit_post_path(post.id),class: 'button' %></td>
+          <td><%= link_to '削除', post_path(post.id), method: :delete, data: { confirm: 'OK?'}, class:'button' %></td>
+        </tr>
+      <% end %>
+    </table>
+<div class="button_center">
+    <%= link_to 'post' , new_post_path,class:'button_post' %>
+</div>
 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.content %></td>
-      <td><%= link_to '編集', edit_post_path(post.id)%></td>
-      <td><%= link_to '削除', post_path(post.id), method: :delete, data: { confirm: 'OK?'}%></td>
-    </tr>
-<% end %>
-
-</table>
-
-<%= link_to 'post' , new_post_path %>
+<footer>
+<p><small>&copy;2023 postpost</small></p>
+</footer>
+  </body>
+</html>

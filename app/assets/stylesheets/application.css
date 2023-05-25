@@ -1,3 +1,92 @@
-p {
-  color: blue;
+body {
+  background-color: rgb(254, 242, 220);
+  margin: 0;
+  padding: 0;
+ font-family: "Tsukimi Rounded", sans-serif; 
+ 
+
+}
+
+.header {
+  height: 120px;
+  background-color: rgb(214, 182, 147);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.main_text {
+  
+  
+  font-family: "Tsukimi Rounded", sans-serif;
+  color: rgb(72, 74, 75);
+  padding-top: 30px;
+  margin: 0;
+}
+
+table {
+  margin-top: 30px;
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+table td {
+  text-align: center;
+  font-size: large;
+  color: rgb(110, 106, 106);
+  font-family: "Tsukimi Rounded", sans-serif;
+  margin-top: 30px;
+ 
+}
+
+.button {
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: rgb(220, 160, 132);
+  color: #eee0ce;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+
+.button_center {
+  text-align: center;
+}
+.button_post {
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #cd686a;
+  color: #eee0ce;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.text_field {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+footer {
+  background-color: rgb(170, 146, 113);
+  text-align: center;
+  padding: 26px 0;
+ position: fixed;
+  margin-top: auto;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+}
+
+footer p {
+  color: #f0b914;
+  font-size: 0.8rem;
+  margin: 0;
 }
